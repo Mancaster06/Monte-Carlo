@@ -79,15 +79,6 @@ print("Utilisation (%):", round(utilisation, 2))
 
 print("\nSample Table (First 20 Customers):")
 print(df.head(20))
-
-
-plt.hist(df["Waiting"], bins=15)
-plt.title("Distribution of Customer Waiting Times")
-plt.xlabel("Waiting Time (minutes)")
-plt.ylabel("Number of Customers")
-
-plt.show()
-
 results = []
 
 # Repeat simulation 50 times
@@ -104,3 +95,13 @@ std_wait = results.std()
 
 print("Average waiting time across simulations:", round(mean_wait, 2))
 print("Standard deviation:", round(std_wait, 2))
+
+
+plt.hist(df["Waiting"], bins=15)
+plt.title("Distribution of Customer Waiting Times")
+plt.xlabel("Waiting Time (minutes)")
+plt.ylabel("Number of Customers")
+
+plt.show()
+
+
